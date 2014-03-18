@@ -30,44 +30,44 @@ public class AddBookTests {
     driver.findElement(By.name("password")).clear();
     driver.findElement(By.name("password")).sendKeys("XZNZ1uIZ");
     driver.findElement(By.cssSelector("button.btn.btn-login")).click();
-    driver.findElement(By.linkText("Книги")).click();
-    driver.findElement(By.linkText("Выберите проект")).click();
-    driver.findElement(By.linkText("Аудиокнига")).click();
+    driver.findElement(By.linkText("РљРЅРёРіРё")).click();
+    driver.findElement(By.linkText("Р’С‹Р±РµСЂРёС‚Рµ РїСЂРѕРµРєС‚")).click();
+    driver.findElement(By.linkText("РђСѓРґРёРѕРєРЅРёРіР°")).click();
     driver.findElement(By.id("NewBookButton")).click();
     driver.findElement(By.name("name")).clear();
-    driver.findElement(By.name("name")).sendKeys("Автотест4");
+    driver.findElement(By.name("name")).sendKeys("РђРІС‚РѕС‚РµСЃС‚4");
     
     driver.findElement(By.id("Authors")).clear();
-    driver.findElement(By.id("Authors")).sendKeys("Чуднова Анна");
-    driver.findElement(By.linkText("Чуднова Анна")).click();
+    driver.findElement(By.id("Authors")).sendKeys("Р§СѓРґРЅРѕРІР° РђРЅРЅР°");
+    driver.findElement(By.linkText("Р§СѓРґРЅРѕРІР° РђРЅРЅР°")).click();
     driver.findElement(By.id("Speakers")).clear();
-    driver.findElement(By.id("Speakers")).sendKeys("Доронин Юрий");
-    driver.findElement(By.linkText("Доронин Юрий")).click();
+    driver.findElement(By.id("Speakers")).sendKeys("Р”РѕСЂРѕРЅРёРЅ Р®СЂРёР№");
+    driver.findElement(By.linkText("Р”РѕСЂРѕРЅРёРЅ Р®СЂРёР№")).click();
     driver.findElement(By.name("inapp")).clear();
     driver.findElement(By.name("inapp")).sendKeys("186247");
     driver.findElement(By.id("Categories")).clear();
-    driver.findElement(By.id("Categories")).sendKeys("Проза");
-    driver.findElement(By.linkText("Проза")).click();
-    driver.findElement(By.id("Categories")).sendKeys("Детектив");
-    driver.findElement(By.linkText("Детектив")).click();
+    driver.findElement(By.id("Categories")).sendKeys("РџСЂРѕР·Р°");
+    driver.findElement(By.linkText("РџСЂРѕР·Р°")).click();
+    driver.findElement(By.id("Categories")).sendKeys("Р”РµС‚РµРєС‚РёРІ");
+    driver.findElement(By.linkText("Р”РµС‚РµРєС‚РёРІ")).click();
     driver.findElement(By.id("AudioExpireDate")).click();
     driver.findElement(By.cssSelector("span.ui-icon.ui-icon-circle-triangle-e")).click();
     driver.findElement(By.linkText("10")).click();
     driver.findElement(By.id("AudioBookDescription")).clear();
-    driver.findElement(By.id("AudioBookDescription")).sendKeys("Тестовое описание для создания скрипта");
+    driver.findElement(By.id("AudioBookDescription")).sendKeys("РўРµСЃС‚РѕРІРѕРµ РѕРїРёСЃР°РЅРёРµ РґР»СЏ СЃРѕР·РґР°РЅРёСЏ СЃРєСЂРёРїС‚Р°");
     driver.findElement(By.xpath("(//button[@type='button'])[8]")).click();
     
-    //driver.findElement(By.cssSelector("span.fileinput-button file")).sendKeys("\\SERVER2\\AppsMinistry\\Аудиокнига_Плюта\\Обложки\\обложки правильные\\175652\\cover_name_library.png");
+    //driver.findElement(By.cssSelector("span.fileinput-button file")).sendKeys("\\SERVER2\\AppsMinistry\\РђСѓРґРёРѕРєРЅРёРіР°_РџР»СЋС‚Р°\\РћР±Р»РѕР¶РєРё\\РѕР±Р»РѕР¶РєРё РїСЂР°РІРёР»СЊРЅС‹Рµ\\175652\\cover_name_library.png");
     //driver.findElement(By.xpath("//button[@type='submit']")).click();
       
-    driver.findElement(By.linkText("Аудиофайлы")).click();
+    driver.findElement(By.linkText("РђСѓРґРёРѕС„Р°Р№Р»С‹")).click();
     driver.findElement(By.id("UpdateButton")).click();
     driver.findElement(By.xpath("(//button[@type='button'])[16]")).click();
     driver.findElement(By.id("SyncButton")).click();
     driver.findElement(By.xpath("(//button[@type='button'])[70]")).click();
-    driver.findElement(By.linkText("Тестовая зона")).click();
+    driver.findElement(By.linkText("РўРµСЃС‚РѕРІР°СЏ Р·РѕРЅР°")).click();
     driver.findElement(By.id("UserMenuButton")).click();
-    driver.findElement(By.linkText("Выход")).click();
+    driver.findElement(By.linkText("Р’С‹С…РѕРґ")).click();
   }
 
   @After
