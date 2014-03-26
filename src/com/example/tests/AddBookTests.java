@@ -21,6 +21,8 @@ public class AddBookTests {
     baseUrl = "http://test.mobadmin.neoline.biz";
     driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
   }
+  
+  private final String BOOK_ID = "186600";
 
   @Test
   public void fillForm() throws Exception {
@@ -33,10 +35,13 @@ public class AddBookTests {
     driver.findElement(By.linkText("Книги")).click();
     driver.findElement(By.linkText("Выберите проект")).click();
     driver.findElement(By.linkText("Аудиокнига")).click();
+   
+    
     driver.findElement(By.id("NewBookButton")).click();
     driver.findElement(By.name("name")).clear();
-    driver.findElement(By.name("name")).sendKeys("Автотест4");
-    
+    driver.findElement(By.name("name")).sendKeys("Автотест6");
+
+      
     driver.findElement(By.id("Authors")).clear();
     driver.findElement(By.id("Authors")).sendKeys("Чуднова Анна");
     driver.findElement(By.linkText("Чуднова Анна")).click();
@@ -44,7 +49,7 @@ public class AddBookTests {
     driver.findElement(By.id("Speakers")).sendKeys("Доронин Юрий");
     driver.findElement(By.linkText("Доронин Юрий")).click();
     driver.findElement(By.name("inapp")).clear();
-    driver.findElement(By.name("inapp")).sendKeys("186247");
+    driver.findElement(By.name("inapp")).sendKeys(BOOK_ID);
     driver.findElement(By.id("Categories")).clear();
     driver.findElement(By.id("Categories")).sendKeys("Проза");
     driver.findElement(By.linkText("Проза")).click();
@@ -66,8 +71,20 @@ public class AddBookTests {
     driver.findElement(By.id("SyncButton")).click();
     driver.findElement(By.xpath("(//button[@type='button'])[70]")).click();
     driver.findElement(By.linkText("Тестовая зона")).click();
+    WebElement myDiv = null;
+    for (WebElement el : driver.findElements(By.cssSelector(".centered.col_id div"))){
+    	if (el.getText().trim().equals(BOOK_ID)){
+    		myDiv = el;
+        	break;
+    	}
+    }
+    if (myDiv != null) {
+    	System.out.println("Автотест6" + " found" + myDiv.getText());
+    	
+    }
     driver.findElement(By.id("UserMenuButton")).click();
     driver.findElement(By.linkText("Выход")).click();
+    
   }
 
   @After
